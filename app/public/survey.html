@@ -2,323 +2,315 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <title>Survey Page</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="https://code.jquery.com/jquery.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<meta charset="UTF-8">
+	<title>Friend Finder </title>
 
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
+	 crossorigin="anonymous">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
+	<div class="container">
 
-    <div class="container">
+		<div class="jumbotron">
+			<h1 class="text-center">
+				<span class="fa fa-facebook-official"></span> Friend Finder </h1>
+			<br>
+			<div class="text-center">
+				<a href="/">
+					<button class="btn btn-lg btn-primary">
+						<span class="fa fa-home"></span>Home Page</button>
+				</a>
 
-        <div class="jumbotron">
+			</div>
+			<hr>
+			<!-- <hr>
             <h1 class="text-center">
-                <span class="fa fa-facebook-official"></span> Friend Finder </h1>
-            <br>
-            <div class="text-center">
-                <a href="/">
-                    <button class="btn btn-lg btn-primary">
-                        <span class="fa fa-home"></span>Home Page</button>
-                </a>
-            </div>
-            <hr>
-            <h1 class="text-center">
-                <span></span> Survey Questions</h1>
+                Survey Questions</h1>
             <hr>
             <h2 class="text-center">About You</h2>
             <br>
             <div class="form-group">
                 <label for="usr">Name: (Required)</label>
-                <input type="text" class="form-control" id="usr" placeholder="Input Name Here!" required>
+                <input type="text" class="form-control" id="name" placeholder="Input Name Here!" required>
             </div>
             <div class="form-group">
                 <label>Link to Photo Image (Required)</label>
                 <input id="image" class="form-control" name="image" placeholder="Image Hyperlink Here!" required>
-            </div>
-        </div>
+            </div> -->
+			<!-- </div> -->
+			<div class="container-fluid">
+				<div class="jumbotron">
+					<h1 class="text-center">Survey Questions</h1>
+					<hr>
+					<form method="POST" action="/api/friends">
+						<div class="text-center">
+							<h2>About You</h2>
+						</div>
+						<div1 class="form-group">
+							<label for="name">Name (Required)</label>
+							<input type="text" class="form-control" placeholder="Input Name Here!" id="name" name="name" required>
+						</div1>
+						<div1 class="form-group">
+							<label for="photo"> Your Image Link (Required)</label>
+							<input type="text" class="form-control" placeholder="Image Hyperlink Here!" id="photo" name="photo" required>
+						</div1>
+						<br>
+						<br>
+						<div class="text-center">
+							<h3 class="form-group">Answer Some Questions and Find Some Friends!</h3>
+						</div>
+						<hr>
+						<h4 class="text-left">
+							<h5>Question 1</h5>
+						</h4>
+						<div1 class="form-group">
+							<label for="q1">I am a very outgoing person.</label>
+							<br>
+							<div class="col-md-4">
+								<select class="form-control" id="q1">
+									<option>1 (Strongly Disagree)</option>
+									<option>2</option>
+									<option>3</option>
+									<option>4</option>
+									<option>5 (Strongly Agree)</option>
+								</select>
+							</div>
+						</div1>
+						<br>
+						<br>
+						<h4 class="text-left">
+							<h5>Question 2</h5>
+						</h4>
+						<div1 class="form-group">
+							<label for="q2">I enjoy teaching others.</label>
+							<br>
+							<div class="col-md-4">
+								<select class="form-control" id="q2">
+									<option>1 (Strongly Disagree)</option>
+									<option>2</option>
+									<option>3</option>
+									<option>4</option>
+									<option>5 (Strongly Agree)</option>
+								</select>
+							</div>
+						</div1>
+						<br>
+						<br>
+						<h4 class="text-left">
+							<h5>Question 3</h5>
+						</h4>
+						<div1 class="form-group">
+							<label for="q3">I think I'm the best at what I do.</label>
+							<br>
+							<div class="col-md-4">
+								<select class="form-control" id="q3">
+									<option>1 (Strongly Disagree)</option>
+									<option>2</option>
+									<option>3</option>
+									<option>4</option>
+									<option>5 (Strongly Agree)</option>
+								</select>
+							</div>
+						</div1>
+						<br>
+						<br>
+						<h4 class="text-left">
+							<h5>Question 4</h5>
+						</h4>
+						<div1 class="form-group">
+							<label for="q4">I enjoying playing or watching sports.</label>
+							<br>
+							<div class="col-md-4">
+								<select class="form-control" id="q4">
+									<option>1 (Strongly Disagree)</option>
+									<option>2</option>
+									<option>3</option>
+									<option>4</option>
+									<option>5 (Strongly Agree)</option>
+								</select>
+							</div>
+						</div1>
+						<br>
+						<br>
+						<h4 class="text-left">
+							<h5>Question 5</h5>
+						</h4>
+						<div1 class="form-group">
+							<label for="q5">I enjoy entertaining..</label>
+							<br>
+							<div class="col-md-4">
+								<select class="form-control" id="q5">
+									<option>1 (Strongly Disagree)</option>
+									<option>2</option>
+									<option>3</option>
+									<option>4</option>
+									<option>5 (Strongly Agree)</option>
+								</select>
+							</div>
+						</div1>
+						<br>
+						<br>
+						<h4 class="text-left">
+							<h5>Question 6</h5>
+						</h4>
+						<div1 class="form-group">
+							<label for="q6">I make a lot of money.</label>
+							<br>
+							<div class="col-md-4">
+								<select class="form-control" id="q6">
+									<option>1 (Strongly Disagree)</option>
+									<option>2</option>
+									<option>3</option>
+									<option>4</option>
+									<option>5 (Strongly Agree)</option>
+								</select>
+							</div>
+						</div1>
+						<br>
+						<br>
+						<h4 class="text-left">
+							<h5>Question 7</h5>
+						</h4>
+						<div1 class="form-group">
+							<label for="q7">I like making new friends.</label>
+							<br>
+							<div class="col-md-4">
+								<select class="form-control" id="q7">
+									<option>1 (Strongly Disagree)</option>
+									<option>2</option>
+									<option>3</option>
+									<option>4</option>
+									<option>5 (Strongly Agree)</option>
+								</select>
+							</div>
+						</div1>
+						<br>
+						<br>
+						<h4 class="text-left">
+							<h5>Question 8</h5>
+						</h4>
+						<div1 class="form-group">
+							<label for="q8">I have lots of friends.</label>
+							<br>
+							<div class="col-md-4">
+								<select class="form-control" id="q8">
+									<option>1 (Strongly Disagree)</option>
+									<option>2</option>
+									<option>3</option>
+									<option>4</option>
+									<option>5 (Strongly Agree)</option>
+								</select>
+							</div>
+						</div1>
+						<br>
+						<br>
+						<h4 class="text-left">
+							<h5>Question 9</h5>
+						</h4>
+						<div1 class="form-group">
+							<label for="q9">I like to be by myself.</label>
+							<br>
+							<div class="col-md-4">
+								<select class="form-control" id="q9">
+									<option>1 (Strongly Disagree)</option>
+									<option>2</option>
+									<option>3</option>
+									<option>4</option>
+									<option>5 (Strongly Agree)</option>
+								</select>
+							</div>
+						</div1>
+						<br>
+						<br>
+						<h4 class="text-left">
+							<h5>Question 10</h5>
+						</h4>
+						<div1 class="form-group">
+							<label for="question10">I enjoy being outdoors.</label>
+							<br>
+							<div class="col-md-4">
+								<select class="form-control" id="q10">
+									<option>1 (Strongly Disagree)</option>
+									<option>2</option>
+									<option>3</option>
+									<option>4</option>
+									<option>5 (Strongly Agree)</option>
+								</select>
+							</div>
+						</div1>
+						<!-- <br>
+						submit<input type="" class="btn btn-primary" value="Request Friend" id="submit"> -->
+					</form>
+				</div>
+				<div class="text-left">
+					<input class="btn btn-success btn-block" type="submit" value="Submit" id="Submit">
+				</div>
+				<div class="text-right">
+					<input type="reset" class="btn btn-danger btn-block" value="Reset" id="Reset">
+					<br>
+					<br>
 
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <div class="text-center">
-                            <h4 class="panel-title">Answer Some Questions and Find Some Friends!</h4>
-                        </div>
-                        <br>
-                        <br>
-                        <h5>Question 1 </h5>
-                        <p>I am a very outgoing person.</p>
-                        <select id="q1">
-                            <option value="">Choose an option</option>
-                            <option value="1">1 (Strongly Disagree)</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5 (Strongly Agree)</option>
-                        </select>
-                        <br>
-                        <br>
-                        <h5>Question 2 </h5>
-                        <p>I enjoy teaching others.</p>
-                        <select id="q2">
-                            <option value="">Choose an option</option>
-                            <option value="1">1 (Strongly Disagree)</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5 (Strongly Agree)</option>
-                        </select>
-                        <br>
-                        <br>
-                        <h5>Question 3 </h5>
-                        <p>I think I'm the best at what I do.</p>
-                        <select id="q3">
-                            <option value="">Choose an option</option>
-                            <option value="1">1 (Strongly Disagree)</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5 (Strongly Agree)</option>
-                        </select>
-                        <br>
-                        <br>
-                        <h5>Question 4 </h5>
-                        <p>I enjoying playing or watching sports.</p>
-                        <select id="q4">
-                            <option value="">Choose an option</option>
-                            <option value="1">1 (Strongly Disagree)</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5 (Strongly Agree)</option>
-                        </select>
-                        <br>
-                        <br>
-                        <h5>Question 5 </h5>
-                        <p>I enjoy entertaining.</p>
-                        <select id="q5">
-                            <option value="">Choose an option</option>
-                            <option value="1">1 (Strongly Disagree)</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5 (Strongly Agree)</option>
-                        </select>
-                        <br>
-                        <br>
-                        <h5>Question 6 </h5>
-                        <p>I make lots of money.</p>
-                        <select id="q6">
-                            <option value="">Choose an option</option>
-                            <option value="1">1 (Strongly Disagree)</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5 (Strongly Agree)</option>
-                        </select>
-                        <br>
-                        <br>
-                        <h5>Question 7</h5>
-                        <p>I like making new friends.</p>
-                        <select id="q7">
-                            <option value="">Choose an option</option>
-                            <option value="1">1 (Strongly Disagree)</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5 (Strongly Agree)</option>
-                        </select>
-                        <br>
-                        <br>
-                        <h5>Question 8 </h5>
-                        <p>People consider me outgoing.</p>
-                        <select id="q8">
-                            <option value="">Choose an option</option>
-                            <option value="1">1 (Strongly Disagree)</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5 (Strongly Agree)</option>
-                        </select>
-                        <br>
-                        <br>
-                        <h5>Question 9 </h5>
-                        <p>I like to be by myself.</p>
-                        <select id="q9">
-                            <option value="">Choose an option</option>
-                            <option value="1">1 (Strongly Disagree)</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5 (Strongly Agree)</option>
-                        </select>
-                        <br>
-                        <br>
-                        <h5>Question 10 </h5>
-                        <p>I enjoy being outdoors.</p>
-                        <select id="q10">
-                            <option value="">Choose an option</option>
-                            <option value="1">1 (Strongly Disagree)</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5 (Strongly Agree)</option>
-                        </select>
-                        <br>
-                        <br>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="text-left">
-        <input class="btn btn-success btn-block" type="submit" value="Submit" id="Submit">
-    </div>
-    <div class="text-right">
-        <input type="reset" class="btn btn-danger btn-block" value="Reset" id="Reset">
-        <br>
-        <br>
-    
-    </div>
+				</div>
+				<hr>
+				<a href="/api/friends">API Friends List</a> |
+				<a href="https://github.com/Kebo83/FriendFinder.git">Keith's GitHub Repo</a>
+			</div>
 
-        <footer class="footer">
-            <div class="container">
+			<div id="myFriendModal" class="modal fade" role="dialog">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal">X</button>
+							<h2 class="modal-title">Best Match</h2>
+						</div>
+						<div class="modal-body">
+							<h2 id="newFriendName"></h2>
+							<img id="newFriendImg" height="50%" width="50%"></img>
+						</div>
+					</div>
+				</div>
+			</div>
 
-                <p class="text-center">
-                    <a href="/api/friends">API Friends Link</a> |
-                    <a href="https://github.com/Kebo83/FriendFinder.git">Keith's GitHub Repo</a>
-                </p>
-            </div>
-        </footer>
+			<script src="https://code.jquery.com/jquery-2.2.3.js" integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4=" crossorigin="anonymous"></script>
+			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+			 crossorigin="anonymous"></script>
 
-    </div>
+
+			<script type="text/javascript">
+				$('#Submit').on("click", function () {
+					var userInput = {
+						name: $('#name').val().trim(),
+						photo: $('#photo').val().trim(),
+						scores: [$('#q1').val().trim(), $('#q2').val().trim(), $('#q3').val().trim(), $('#q4').val().trim(), $('#q5').val().trim(), $('#q6').val().trim(), $('#q7').val().trim(), $('#q8').val().trim(), $('#q9').val().trim(), $('#q10').val().trim()]
+					}
+					var currentURL = window.location.origin;
+					$.post(currentURL + '/api/friends', userInput, function (data) {
+						$("#newFriendName").text(data.name);
+						$("#newFriendImg").attr("src", data.photo);
+						$("#myFriendModal").modal("show");
+					});
+					return false;
+				});
+
+				$("#Reset").on("click",
+					function clearUserInput(event) {
+						$('#name').val("");
+						$('#photo').val("");
+						$('#q1').val("");
+						$('#q2').val("");
+						$('#q3').val("");
+						$('#q4').val("");
+						$('#q5').val("");
+						$('#q6').val("");
+						$('#q7').val("");
+						$('#q8').val("");
+						$('#q9').val("");
+						$("#q10").val("");
+					});
+			</script>
 
 </body>
-
-
-
-<script type="text/javascript">
-
-
-    var currentURL = window.location.origin;
-    // console.log(currentURL);
-
-    // $.ajax({ url: currentURL + "/api/friends", method: "GET" })
-    //     .then(function (Data) {
-    //         // console.log(Data);
-    //         // ComparisonArray.push(Data);
-
-    //         //   console.log(Data[0].scores);
-    //         //   console.log(ComparisonArray);
-    //         //     
-    //         for (var i = 0; i < Data.length; i++) {
-    //             var diff = [0];
-    //             ComparisonArray.push(Data[i].scores);
-    //             for (let j = 0; j < NewFriendInfo.length; j++) {
-
-    //                 var diff = (Math.abs(parseInt(ComparisonArray[i][j]) - parseInt(NewFriendInfo[j])));
-    //                 // console.log(calculationArray[j]);
-    //                 if (diff <= bestMatch.friendDifference) {
-    //                     bestMatch.friendDifference = diff;
-    //                     bestMatch.name = Data[i].name;
-    //                     bestMatch.photo = Data[i].photo;
-    //                     console.log(bestMatch.name);
-    //                     console.log(bestMatch.photo);
-    //                     console.log(bestMatch.friendDifference);
-    //                 }
-    //             }
-    //         }
-
-    //         //     ComparisonArray.push(Data[i].scores)
-    //         //     };
-
-    //         // console.log(ComparisonArray);
-    //     });
-
-
-    $("#Submit").on("click", function (event) {
-        event.preventDefault();
-        var newFriend = {
-            name: $('#usr').val().trim(),
-            profilePic: $('#image').val().trim(),
-            scores: [
-                $('#q1').val(),
-                $('#q2').val(),
-                $('#q3').val(),
-                $('#q4').val(),
-                $('#q5').val(),
-                $('#q6').val(),
-                $('#q7').val(),
-                $('#q8').val(),
-                $('#q9').val(),
-                $('#q10').val(),
-            ]
-        };
-        console.log(newFriend);
-        NewFriendInfo.push(newFriend.scores);
-        compareFriends();
-
-    });
-    var NewFriendInfo = [5, 5, 5, 5, 5, 5, 5, 5, 5, 5];
-    var ComparisonArray = [];
-    var bestMatch = {
-        name: "",
-        photo: "",
-        friendDifference: 1000
-    };
-    // console.log(bestMatch);
-    var ComparisonTotal = 0;
-    var calculationArray = [];
-
-
-
-    function compareFriends() {
-        $.ajax({ url: currentURL + "/api/friends", method: "GET" })
-            .then(function (Data) {
-
-                for (var i = 0; i < Data.length; i++) {
-                    var diff = [0];
-                    ComparisonArray.push(Data[i].scores);
-                    for (let j = 0; j < NewFriendInfo.length; j++) {
-                        var diff = (Math.abs(parseInt(ComparisonArray[i][j]) - parseInt(NewFriendInfo[j])));
-                        
-                        if (diff <= bestMatch.friendDifference) {
-                            bestMatch.friendDifference = diff;
-                            bestMatch.name = Data[i].name;
-                            bestMatch.photo = Data[i].photo;
-                            console.log(bestMatch.name);
-                            console.log(bestMatch.photo);
-                            console.log(bestMatch.friendDifference);
-                        }
-                    }
-                }
-            });
-
-    };
-
-    $("#Reset").on("click", 
-        function clearNewFriend(event) {
-            $('#usr').val("");
-            $('#image').val("");
-            $('#q1').val("");
-            $('#q2').val("");
-            $('#q3').val("");
-            $('#q4').val("");
-            $('#q5').val("");
-            $('#q6').val("");
-            $('#q7').val("");
-            $('#q8').val("");
-            $('#q9').val("");
-            $("#q10").val("");
-            NewFriendInfo = [];
-            console.log(NewFriendInfo);
-        });
- 
-
-</script>
 
 </html>
